@@ -109,13 +109,14 @@ class DependencyTrackApi:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='DependencyTrack cli tool.',prog='dtcli')
+    parser = argparse.ArgumentParser(description='DependencyTrack cli tool.',prog='dptcli')
     parser.add_argument('-u', '--url',dest='input_url', metavar='http(s)://ip:port', type=str, help='Dependency Track backgroud api url.', required=True)
     parser.add_argument('-t', '--token', dest='input_token', metavar='xx-xxx-xx', type=str, help='Dependency Track backgroud api token.',required=True)    
     parser.add_argument('-c', dest='create_project', metavar='ProjectName ProjectType', type=str, help='Create project in the Dependency Track.', nargs=2)    
     parser.add_argument('-d', '--delete-project', dest='delete_project', metavar='ProjectName', type=str, help='Delete project in the Dependency Track.')    
     parser.add_argument('-l', '--list-all-project', dest='list_project',  help='List all projects in the Dependency Track.',action='store_true')    
     parser.add_argument('-sv', dest='summary_vuln_project', metavar='ProjectName', type=str, help='Summary of Vulnerability Number project in the Dependency Track.')    
+    parser.add_argument('-i', '--uuid', dest='uuid_project', metavar='ProjectName', type=str, help='Display project uuid in the Dependency Track.')
     args = parser.parse_args()
     dpt = DependencyTrackApi(args.input_url, args.input_token)
     if args.create_project:
@@ -126,6 +127,8 @@ def main():
         print(dpt.get_project_metrics(args.summary_vuln_project))
     elif args.list_project:
         print(dpt.get_project_all())
+    elif args.uuid_project:
+        print(dpt.get_project_uuid(args.uuid_project))
     else:
         print(dpt.check_apikey())
    
