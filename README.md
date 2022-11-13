@@ -13,12 +13,12 @@ This is a cli tool for DependencyTrack.
 ## install
 python2 use:
 ```
-pip install dptcli
+pip install -i https://test.pypi.org/simple/ dptcli
 ```
 
 python3 use:
 ```
-pip3 install dptcli
+pip3 install -i https://test.pypi.org/simple/ dptcli
 ```
 ## uninstall
 python2 use:

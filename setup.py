@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 setup(
     name = "dptcli",
     version = "0.0.2",
-    keywords = ("pip", "dependencytrack", "cli"),
+    keywords = ("dependencytrack", "cli"),
     description = "Dependency Track cli tool",
     long_description=long_description,
     long_description_content_type="text/markdown",
