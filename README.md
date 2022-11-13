@@ -4,21 +4,37 @@ This is a cli tool for DependencyTrack.
 ## Features
 
 * Check your apikey
+* Display project's uuid in the Dependency Track
 * Create the project in the Dependency Track
 * Delete the project in the Dependency Track
 * List all projects in the Dependency Track
 * Summary vuln all projects in the Dependency Track
 
 ## install
+python2 use:
 ```
-pip install dtcli
+pip install dptcli
+```
+
+python3 use:
+```
+pip3 install dptcli
+```
+## uninstall
+python2 use:
+```
+pip uninstall dptcli
+```
+
+python3 use:
+```
+pip3 uninstall dptcli
 ```
 
 ## Usage
-
-Run the follow help, it will show all.
+Run help, it will show all.
 ```shell
-python dtcli.py -h 
+dptcli -h
 ```
 
 
